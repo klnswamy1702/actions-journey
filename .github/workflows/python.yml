@@ -1,0 +1,14 @@
+name: Hello Workflow
+
+on: [push]
+
+jobs:
+  hello_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello, GitHub Actions!"
+      - name: Setup Java JDK
+        uses: actions/setup-java@v6.0.1
+      - name: Setup Python
+        uses: actions/setup-python@v7.0.0
